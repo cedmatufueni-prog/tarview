@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" class="is-loading">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpinionRev - Get Paid to Review Brands</title>
+    <!-- 1. EXTREME CLOAK: This must be the VERY FIRST thing in the head. 
+         It hides the entire HTML element so visitors see a clean white screen 
+         instead of the "broken" version shown in your screenshot. -->
+    <style id="loading-cloak">
+        html.is-loading { background-color: #ffffff !important; }
+        html.is-loading body { display: none !important; }
+        body { opacity: 0; transition: opacity 0.4s ease-in-out; }
+        .loaded body { opacity: 1; }
+    </style>
+    <!-- 2. CRITICAL CSS: Basic layout rules -->
+    <style>
+        :root { --sky-600: #0284c7; }
+        body { margin: 0; padding: 0; font-family: sans-serif; background: #fff; text-align: center; }
+        header { padding: 20px; display: flex; justify-content: center; }
+        h1 { font-size: 24px; font-weight: 900; margin: 0; }
+        img { max-width: 100%; height: auto; border-radius: 15px; }
+    </style>
+    <!-- 3. EXTERNAL ASSETS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- 4. CUSTOM STYLES -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .step-section { display: none; }
+        .step-section.active { display: block; }
+        @keyframes pulse-custom {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .animate-pulse-custom { animation: pulse-custom 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        button { -webkit-tap-highlight-color: transparent; cursor: pointer; }
+        .quiz-btn { background: #0f172a; color: white; padding: 15px 30px; border-radius: 12px; font-weight: bold; border: none; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased pb-12">
+    <!-- Sticky Banner -->
+    <div class="bg-sky-600 text-white py-2.5 px-4 text-center text-xs md:text-sm font-bold sticky top-0 z-50 shadow-md backdrop-blur-md bg-opacity-95">
+        <span class="flex items-center justify-center gap-2">
+            <i data-lucide="users" class="w-3.5 h-3.5 animate-pulse-custom"></i>
+            High Demand: <span class="bg-sky-800 px-2 py-0.5 rounded ml-1 uppercase tracking-tight">New Testing Positions Added Today</span>
+        </span>
+    </div>
+    <!-- Header -->
+    <header class="max-w-6xl mx-auto px-5 py-6 flex justify-between items-center border-b border-slate-50 md:border-none">
+        <div class="flex items-center gap-2 cursor-pointer" onclick="goToStep(0)">
+            <div class="bg-sky-600 p-2 rounded-xl shadow-lg shadow-sky-200">
+                <i data-lucide="message-square" class="text-white w-5 h-5"></i>
+            </div>
+            <h1 class="text-xl md:text-2xl font-black tracking-tight text-slate-800">
+                opinion<span class="text-sky-600">rev</span>
+            </h1>
+        </div>
+        <div class="md:hidden flex items-center gap-1.5 bg-green-50 text-green-700 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider border border-green-100">
+            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            1.2k Jobs
+        </div>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-500">
+            <span class="flex items-center gap-1 text-green-600 font-bold">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> 1,242 Active Jobs
+            </span>
+            <span class="flex items-center gap-1">
+                <i data-lucide="award" class="w-3.5 h-3.5"></i> Verified Brands
+            </span>
+        </div>
+    </header>
+    <main class="max-w-6xl mx-auto px-5 pt-8 md:pt-16">
+        <!-- STEP 0: HERO SECTION -->
+        <section id="step-0" class="step-section active">
+            <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                <div class="space-y-6 md:space-y-8">
+                    <div class="inline-flex items-center gap-2 bg-sky-50 text-sky-700 px-4 py-2 rounded-full text-xs md:text-sm font-bold border border-sky-100">
+                        <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
+                        Average Pay: $16 - $36/hr
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tight text-slate-900">
+                        Get Paid to <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-indigo-600">Review Top Brands</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-slate-600 leading-relaxed">
+                        Join our exclusive network of testers. Influence the brands you love and get compensated for your honest feedback.
+                    </p>
+                    <div class="flex flex-col gap-5">
+                        <button onclick="nextStep()" class="w-full md:w-fit px-10 py-5 bg-slate-900 text-white rounded-2xl font-bold text-lg hover:bg-slate-800 transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 active:scale-[0.97] quiz-btn">
+                            Start Quiz <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
+                        <div class="flex items-center gap-4 py-2 border-t border-slate-100 md:border-none md:py-0">
+                            <div class="flex -space-x-2.5">
+                                <img src="https://i.pravatar.cc/100?img=32" class="w-9 h-9 rounded-full border-2 border-white bg-slate-200 shadow-sm" alt="user">
+                                <img src="https://i.pravatar.cc/100?img=26" class="w-9 h-9 rounded-full border-2 border-white bg-slate-200 shadow-sm" alt="user">
+                                <img src="https://i.pravatar.cc/100?img=12" class="w-9 h-9 rounded-full border-2 border-white bg-slate-200 shadow-sm" alt="user">
+                            </div>
+                            <div class="text-xs md:text-sm font-bold text-slate-500 text-left md:text-center">
+                                <span class="text-slate-900 font-extrabold block md:inline">Join 4,000+</span> active testers today
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:hidden pt-4">
+                        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                            <p class="text-[10px] font-black uppercase text-slate-400 mb-3 tracking-widest text-center">Trending Reviews Available</p>
+                            <div class="flex justify-between items-center bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+                                <div class="text-left">
+                                    <p class="font-bold text-slate-800 text-sm">Luxe Skincare 🌿</p>
+                                    <p class="text-[10px] text-slate-500">Anti-Aging Cream Feedback</p>
+                                </div>
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg font-black text-xs">$35.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Desktop Assignments -->
+                <div class="relative hidden md:block">
+                    <div class="absolute -inset-10 bg-sky-200/40 rounded-full blur-3xl opacity-30"></div>
+                    <div class="relative bg-white p-10 rounded-[2.5rem] shadow-2xl border border-slate-100 text-left">
+                        <div class="space-y-5">
+                            <div class="flex justify-between items-center pb-5 border-b">
+                                <span class="font-bold text-slate-400 text-sm tracking-widest uppercase">Available Assignments</span>
+                                <span class="flex items-center gap-1.5 text-green-500 font-bold text-sm bg-green-50 px-3 py-1 rounded-full">
+                                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div> Live Now
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between p-5 bg-slate-50 rounded-2xl border border-transparent hover:border-sky-100 hover:bg-white hover:shadow-lg transition-all cursor-pointer">
+                                <div><p class="font-black text-slate-800">Echo Electronics</p><p class="text-xs text-slate-500 font-medium">Wireless Earbuds Review</p></div>
+                                <span class="font-black text-sky-600 text-lg">$45.00</span>
+                            </div>
+                            <div class="flex items-center justify-between p-5 bg-slate-50 rounded-2xl border border-transparent hover:border-sky-100 hover:bg-white hover:shadow-lg transition-all cursor-pointer">
+                                <div><p class="font-black text-slate-800">Luxe Skincare</p><p class="text-xs text-slate-500 font-medium">Anti-Aging Cream Feedback</p></div>
+                                <span class="font-black text-sky-600 text-lg">$30.00</span>
+                            </div>
+                            <div class="flex items-center justify-between p-5 bg-slate-50 rounded-2xl border border-transparent hover:border-sky-100 hover:bg-white hover:shadow-lg transition-all cursor-pointer">
+                                <div><p class="font-black text-slate-800">Peak Athletics</p><p class="text-xs text-slate-500 font-medium">Running Shoe Testing</p></div>
+                                <span class="font-black text-sky-600 text-lg">$60.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonials -->
+            <section class="mt-24 md:mt-40 pt-16 border-t border-slate-100">
+                <div class="text-center mb-12 md:mb-20">
+                    <h3 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 italic tracking-tight underline decoration-sky-500 decoration-4 underline-offset-8">Success Stories</h3>
+                    <p class="text-slate-500 font-bold text-sm md:text-base px-6">Over $50,000 paid out to our community this month</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+                    <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-1 transition-all">
+                        <div class="relative mb-6">
+                            <img src="https://i.pravatar.cc/150?img=49" class="w-20 h-20 rounded-[2rem] object-cover ring-4 ring-sky-50 shadow-md" alt="Sarah L.">
+                            <div class="absolute -bottom-2 -right-2 bg-green-500 text-white p-1 rounded-full border-4 border-white"><i data-lucide="check-circle" class="w-3 h-3"></i></div>
+                        </div>
+                        <div class="flex gap-1 mb-4 text-yellow-400"><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i></div>
+                        <p class="text-slate-600 leading-relaxed italic mb-6 text-sm md:text-base">"I love how easy it is to share my thoughts. It's rewarding to know my feedback helps brands while I earn extra cash for my family."</p>
+                        <div class="mt-auto"><span class="font-black text-slate-800 block">Sarah L.</span><span class="text-[10px] uppercase tracking-widest font-black text-slate-300">Stay-at-home Mom</span></div>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-1 transition-all">
+                        <div class="relative mb-6">
+                            <img src="https://i.pravatar.cc/150?img=34" class="w-20 h-20 rounded-[2rem] object-cover ring-4 ring-sky-50 shadow-md" alt="Jessica M.">
+                            <div class="absolute -bottom-2 -right-2 bg-green-500 text-white p-1 rounded-full border-4 border-white"><i data-lucide="check-circle" class="w-3 h-3"></i></div>
+                        </div>
+                        <div class="flex gap-1 mb-4 text-yellow-400"><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i></div>
+                        <p class="text-slate-600 leading-relaxed italic mb-6 text-sm md:text-base">"Found this a few months ago and I'm hooked. It's fun, easy to use, and definitely the best side-hustle I've tried this year!"</p>
+                        <div class="mt-auto"><span class="font-black text-slate-800 block">Jessica M.</span><span class="text-[10px] uppercase tracking-widest font-black text-slate-300">Student</span></div>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-1 transition-all">
+                        <div class="relative mb-6">
+                            <img src="https://i.pravatar.cc/150?img=11" class="w-20 h-20 rounded-[2rem] object-cover ring-4 ring-sky-50 shadow-md" alt="David S.">
+                            <div class="absolute -bottom-2 -right-2 bg-green-500 text-white p-1 rounded-full border-4 border-white"><i data-lucide="check-circle" class="w-3 h-3"></i></div>
+                        </div>
+                        <div class="flex gap-1 mb-4 text-yellow-400"><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i><i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i></div>
+                        <p class="text-slate-600 leading-relaxed italic mb-6 text-sm md:text-base">"Game changer for my extra income. The positions are straightforward and the payouts are consistent. Highly recommended."</p>
+                        <div class="mt-auto"><span class="font-black text-slate-800 block">David S.</span><span class="text-[10px] uppercase tracking-widest font-black text-slate-300">Freelancer</span></div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- QUIZ CONTAINER -->
+        <section id="quiz-container" class="step-section max-w-2xl mx-auto py-4 md:py-12">
+            <div class="mb-10 text-left">
+                <div class="flex justify-between items-end mb-3">
+                    <h3 id="quiz-step-label" class="text-sky-600 font-black uppercase tracking-[0.2em] text-[10px]">Step 1 of 3</h3>
+                    <span id="quiz-percent" class="text-slate-400 font-bold text-xs">33% Complete</span>
+                </div>
+                <div class="h-2.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                    <div id="quiz-progress-bar" class="h-full bg-sky-600 rounded-full transition-all duration-500 ease-out" style="width: 33.33%"></div>
+                </div>
+            </div>
+            <div class="mb-10 min-h-[100px] text-left">
+                <h4 id="quiz-question" class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight">
+                    Are you over 18 years of age?
+                </h4>
+                <p class="text-slate-500 mt-3 font-medium text-sm md:text-base">Your answers help us match you with the best available hourly testing positions.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-4">
+                <button onclick="nextStep()" class="w-full text-left p-6 bg-white border-2 border-slate-100 rounded-2xl hover:border-sky-600 hover:shadow-xl hover:shadow-sky-100 transition-all font-bold text-lg flex justify-between items-center group active:scale-[0.98]">
+                    Yes, I do
+                    <div class="bg-sky-50 p-2 rounded-lg group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </div>
+                </button>
+                <button onclick="nextStep()" class="w-full text-left p-6 bg-white border-2 border-slate-100 rounded-2xl hover:border-sky-600 transition-all font-bold text-lg flex justify-between items-center group active:scale-[0.98]">
+                    No, not currently
+                    <div class="bg-slate-50 p-2 rounded-lg group-hover:bg-sky-600 group-hover:text-white transition-colors text-slate-300">
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </div>
+                </button>
+            </div>
+        </section>
+        <!-- RESULTS SECTION -->
+        <section id="step-4" class="step-section max-w-2xl mx-auto text-center py-4 md:py-12">
+            <div class="mb-6 inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 bg-green-100 text-green-600 rounded-full ring-8 ring-green-50">
+                <i data-lucide="check-circle" class="w-10 h-10 md:w-12 md:h-12"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">You're Pre-Qualified!</h2>
+            <p class="text-base md:text-lg text-slate-600 mb-10 leading-relaxed px-4">
+                We found <span class="text-sky-600 font-black">14 positions</span> available in your area. Complete registration now to access your <span class="text-slate-900 font-bold underline decoration-sky-200 underline-offset-4">First Assignments</span>.
+            </p>
+            <div class="bg-amber-50 border border-amber-200 p-5 md:p-6 rounded-2xl mb-10 text-left relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 bg-amber-200 rounded-full opacity-10"></div>
+                <p class="text-amber-800 text-xs md:text-sm font-black flex items-center gap-2 mb-3 tracking-widest uppercase">
+                    <i data-lucide="shield-check" class="w-4.5 h-4.5"></i> Required Step:
+                </p>
+                <p class="text-amber-900 leading-relaxed text-sm md:text-base font-medium">
+                    You will receive a confirmation email. You <span class="font-black underline">MUST</span> click the activation link to start receiving hourly assignments.
+                </p>
+            </div>
+            <button id="final-cta" onclick="handleFinalRedirect()" class="w-full py-6 bg-sky-600 text-white rounded-2xl font-black text-xl md:text-2xl shadow-2xl transition-all flex flex-col items-center justify-center gap-1 overflow-hidden active:scale-[0.98]">
+                <span id="cta-text" class="flex items-center gap-3 uppercase font-black">
+                    Start Earning $16-$36/hr <i data-lucide="arrow-right" class="w-6 h-6"></i>
+                </span>
+                <span id="cta-sub" class="text-[10px] opacity-70 font-bold uppercase tracking-[0.3em]">Quick 1-Minute Registration</span>
+            </button>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 px-6 mt-20 md:mt-32">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="flex items-center justify-center gap-2 mb-10 opacity-60">
+                <div class="bg-white/10 p-1.5 rounded-lg">
+                    <i data-lucide="message-square" class="text-white w-4 h-4"></i>
+                </div>
+                <span class="text-lg font-black tracking-tighter text-white">opinionrev</span>
+            </div>
+            <p class="text-[9px] md:text-xs uppercase tracking-[0.25em] leading-loose mb-10 opacity-50 px-4">
+                THIS SITE IS NOT A PART OF THE FACEBOOK WEBSITE OR FACEBOOK INC. ADDITIONALLY, THIS SITE IS NOT ENDORSED BY FACEBOOK IN ANY WAY. FACEBOOK IS A TRADEMARK OF FACEBOOK, INC.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 text-[10px] md:text-xs font-black uppercase tracking-widest">
+                <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+                <span class="hidden md:inline opacity-20">|</span>
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <span class="hidden md:inline opacity-20">|</span>
+                <a href="#" class="hover:text-white transition-colors">Support Portal</a>
+            </div>
+            <p class="mt-12 text-[10px] opacity-30 font-bold">© 2024 OpinionRev Global. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- REVEAL SCRIPT -->
+    <script>
+        /**
+         * The problem you're seeing in your screenshot is called FOUC (Flash of Unstyled Content).
+         * We have forced the HTML tag to have a "is-loading" class at the very beginning.
+         * This script will only remove that class once the browser has finished parsing the page.
+         */
+        function showPage() {
+            // Remove the hard cloak and trigger icons
+            document.documentElement.classList.remove('is-loading');
+            document.documentElement.classList.add('loaded');
+            if (window.lucide) window.lucide.createIcons();
+            // Safety: if the stylesheet still hasn't triggered after 1.5 seconds, show it anyway
+            setTimeout(() => {
+                document.documentElement.classList.remove('is-loading');
+                document.documentElement.classList.add('loaded');
+            }, 1500);
+        }
+        // Run as soon as basic DOM is parsed
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', showPage);
+        } else {
+            showPage();
+        }
+        // App Logic
+        let currentStep = 0;
+        const totalQuizSteps = 3;
+        const AFFILIATE_LINK = "https://glctrk.org/aff_c?offer_id=1373&aff_id=165890";
+        const questions = [
+            "Are you over 18 years of age?",
+            "Do you have 15 minutes a day to write reviews?",
+            "Do you have a smartphone or computer with internet?"
+        ];
+        window.nextStep = function() { window.goToStep(currentStep + 1); };
+        window.goToStep = function(step) {
+            currentStep = step;
+            document.querySelectorAll('.step-section').forEach(s => s.classList.remove('active'));
+            if (currentStep === 0) document.getElementById('step-0').classList.add('active');
+            else if (currentStep >= 1 && currentStep <= 3) {
+                document.getElementById('quiz-container').classList.add('active');
+                updateQuizUI();
+            } else document.getElementById('step-4').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (window.lucide) window.lucide.createIcons();
+        };
+        function updateQuizUI() {
+            const idx = currentStep - 1;
+            const pct = (currentStep / totalQuizSteps) * 100;
+            document.getElementById('quiz-question').innerText = questions[idx];
+            document.getElementById('quiz-step-label').innerText = `Step ${currentStep} of 3`;
+            document.getElementById('quiz-percent').innerText = `${Math.round(pct)}% Complete`;
+            document.getElementById('quiz-progress-bar').style.width = `${pct}%`;
+        }
+        window.handleFinalRedirect = function() {
+            const btn = document.getElementById('final-cta');
+            btn.disabled = true;
+            btn.style.backgroundColor = '#94a3b8';
+            document.getElementById('cta-text').innerHTML = `<span>Connecting Portal...</span>`;
+            setTimeout(() => { window.location.href = AFFILIATE_LINK; }, 1200);
+        };
+    </script>
+</body>
+</html>
